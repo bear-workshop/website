@@ -1,0 +1,59 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Paper Submission - Workshop">
+  <header class="bg-blue-600 text-white py-12">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl font-bold">Paper Submission</h1>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-3xl mx-auto">
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">Istruzioni per gli Autori</h2>
+        <div class="prose prose-lg">
+          <p class="mb-4">
+            Gli autori sono invitati a presentare articoli originali e inediti che descrivono ricerche avanzate e applicazioni innovative nel campo...
+          </p>
+          
+          <h3 class="text-xl font-semibold mt-8 mb-4">Linee Guida per la Sottomissione</h3>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>I paper devono essere scritti in inglese</li>
+            <li>Lunghezza massima: X pagine incluse figure e riferimenti</li>
+            <li>Formato: PDF</li>
+            <li>Template: utilizzare il template fornito [link al template]</li>
+          </ul>
+
+          <h3 class="text-xl font-semibold mt-8 mb-4">Processo di Review</h3>
+          <p class="mb-4">
+            Tutti i paper saranno sottoposti a un processo di peer review doppio cieco. 
+            Ogni submission sarà valutata da almeno tre membri del comitato di programma.
+          </p>
+
+          <h3 class="text-xl font-semibold mt-8 mb-4">Criteri di Valutazione</h3>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Originalità e innovazione</li>
+            <li>Qualità tecnica e metodologica</li>
+            <li>Chiarezza e presentazione</li>
+            <li>Rilevanza per il workshop</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="bg-blue-50 rounded-lg p-6 mb-12">
+        <h2 class="text-xl font-bold mb-4">Sistema di Submission</h2>
+        <p class="mb-4">
+          Le submission devono essere effettuate attraverso il sistema EasyChair:
+        </p>
+        <a 
+          href="#" 
+          class="inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+        >
+          Vai al Sistema di Submission
+        </a>
+      </section>
+    </div>
+  </main>
+</MainLayout>

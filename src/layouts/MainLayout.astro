@@ -1,0 +1,53 @@
+---
+const { title } = Astro.props;
+const currentPath = Astro.url.pathname;
+
+const navItems = [
+  { path: '/', label: 'Home' },
+  { path: '/submission/', label: 'Paper Submission' },
+  { path: '/committee/', label: 'Committee' },
+];
+---
+
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <style is:global>
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <nav class="bg-blue-600 text-white">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center space-x-8">
+            {navItems.map(item => (
+              <a
+                href={item.path}
+                class:list={[
+                  'hover:text-blue-200 transition-colors',
+                  currentPath === item.path ? 'font-bold' : 'font-normal'
+                ]}
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <slot />
+
+    <footer class="bg-gray-800 text-white py-6 mt-12">
+      <div class="container mx-auto px-4 text-center">
+        <p>© 2025 Workshop. Tutti i diritti riservati.</p>
+      </div>
+    </footer>
+  </body>
+</html>

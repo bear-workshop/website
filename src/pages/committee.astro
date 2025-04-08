@@ -1,0 +1,71 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+
+const organizers = [
+  {
+    name: 'Prof. Nome Cognome',
+    role: 'General Chair',
+    affiliation: 'Università di Example',
+    email: 'email@example.com'
+  },
+  {
+    name: 'Dr. Nome Cognome',
+    role: 'Program Chair',
+    affiliation: 'Università di Example',
+    email: 'email@example.com'
+  }
+];
+
+const pcMembers = [
+  {
+    name: 'Prof. Nome Cognome',
+    affiliation: 'Università di Example',
+    country: 'Italia'
+  },
+  // Aggiungi altri membri del PC qui
+];
+---
+
+<MainLayout title="Committee - Workshop">
+  <header class="bg-blue-600 text-white py-12">
+    <div class="container mx-auto px-4">
+      <h1 class="text-4xl font-bold">Organizing Committee</h1>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto">
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">Organizing Committee</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {organizers.map(person => (
+            <div class="bg-white rounded-lg shadow-md p-6">
+              <h3 class="font-bold text-lg mb-1">{person.name}</h3>
+              <p class="text-blue-600 font-medium mb-2">{person.role}</p>
+              <p class="text-gray-600">{person.affiliation}</p>
+              <a href={`mailto:${person.email}`} class="text-blue-500 hover:underline">
+                {person.email}
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section class="mb-12">
+        <h2 class="text-2xl font-bold mb-6">Program Committee</h2>
+        <div class="bg-white rounded-lg shadow-md p-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {pcMembers.map(member => (
+              <div class="border-b border-gray-200 py-3 last:border-0">
+                <p class="font-medium">{member.name}</p>
+                <p class="text-gray-600 text-sm">
+                  {member.affiliation}, {member.country}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</MainLayout>
