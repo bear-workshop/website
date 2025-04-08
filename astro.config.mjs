@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   site: 'https://bear-workshop.github.io',
-  base: '',
+  base: '/website',
   integrations: [tailwind()],
   output: 'static',
   build: {
