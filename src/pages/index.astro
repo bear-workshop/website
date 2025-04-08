@@ -1,5 +1,4 @@
 ---
-import '../styles/global.css';
 const workshopDate = "April 15-16, 2025"; // Update with your actual workshop date
 const workshopTitle = "Workshop Title"; // Update with your actual workshop title
 ---
@@ -10,6 +9,11 @@ const workshopTitle = "Workshop Title"; // Update with your actual workshop titl
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{workshopTitle}</title>
+    <style is:global>
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+    </style>
   </head>
   <body class="bg-gray-50">
     <header class="bg-blue-600 text-white py-12">
