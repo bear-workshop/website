@@ -7,8 +7,8 @@ const currentPath = Astro.url.pathname;
 const navItems = [
   { path: import.meta.env.BASE_URL + '/', label: 'Home', icon: '🏠' },
   { path: import.meta.env.BASE_URL + '/program/', label: 'Program', icon: '📅' },
-  { path: import.meta.env.BASE_URL + '/submission/', label: 'Paper Submission', icon: '📝' },
-  { path: import.meta.env.BASE_URL + '/committee/', label: 'Committee', icon: '👥' },
+  { path: import.meta.env.BASE_URL + '/submission/', label: 'Instructions for Authors', icon: '📝' },
+  { path: import.meta.env.BASE_URL + '/committee/', label: 'Organization', icon: '👥' },
 ];
 ---
 
@@ -101,13 +101,13 @@ const navItems = [
       </div>
     </header>
 
-    <main class="flex-grow pt-16">
+    <main class="flex-grow pt-14">
       <slot />
     </main>
 
     <footer class="bg-gray-800 text-white py-8 mt-12">
       <div class="container mx-auto px-4 grid md:grid-cols-3 gap-8">
-        <p>© 2025 Workshop. Tutti i diritti riservati.</p>
+        <p>© BEAR 2025 Workshop</p>
       </div>
     </footer>
       <script src="/src/scripts/menu.js"></script>
