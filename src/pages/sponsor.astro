@@ -36,20 +36,22 @@ const sponsors = [
         <div class="max-w-4xl mx-auto">
             <section class="mb-12">
                 <h2 class="text-2xl font-bold mb-6">Sponsors</h2>
-                <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
+                <div class="grid grid-cols-1 gap-6">
                     {sponsors.map(sp => (
-                    <div class="bg-white rounded-lg shadow-md p-6">
-                        <h3 class="font-bold text-lg mb-1">{sp.label}</h3>
-                        <div class="grid grid-cols-2 md:grid-cols-md">
-                            <img src={sp.icon} alt={sp.label} />
-                            <p class="text-gray-600">{sp.description}</p>
-                        </div>
-
-                    </div>
+                            <div class="bg-white rounded-lg shadow-md p-6 flex items-start gap-4">
+                                <img
+                                        src={sp.icon}
+                                        alt={`${sp.label} logo`}
+                                        class="w-16 h-16 object-contain shrink-0"
+                                />
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">{sp.label}</h3>
+                                    <p class="text-gray-600 text-sm">{sp.description}</p>
+                                </div>
+                            </div>
                     ))}
                 </div>
             </section>
-
         </div>
     </main>
 </MainLayout>
