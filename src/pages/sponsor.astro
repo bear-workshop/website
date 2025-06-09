@@ -9,7 +9,7 @@ const sponsors = [
     },
     {
         label: 'Age-It',
-        description: 'Ministry of the University and Research under the Piano Nazionale per gli Investimenti Complementary PNC-PNRR “A novel public-private alliance to generate socioeconomic, biomedical and technological solutions for an inclusive Italian ageing society” (Age-IT Project), CUP: B83C22004800006 https://ageit.eu/wp/',
+        description: 'Ministry of the University and Research under the Piano Nazionale per gli Investimenti Complementary PNC-PNRR “A novel public-private alliance to generate socioeconomic, biomedical and technological solutions for an inclusive Italian ageing society” (Age-IT Project), CUP: B83C22004800006',
         icon: '/ageit-icon.jpg'
     },
     {
@@ -41,7 +41,7 @@ const sponsors = [
                     <div class="bg-white rounded-lg shadow-md p-6">
                         <h3 class="font-bold text-lg mb-1">{sp.label}</h3>
                         <div class="grid grid-cols-2 md:grid-cols-md">
-                            <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+                            <img src={sp.icon} alt={sp.label} />
                             <p class="text-gray-600">{sp.description}</p>
                         </div>
 
