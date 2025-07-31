@@ -119,7 +119,7 @@ const items = [
     </header>
 
     <main class="container mx-auto px-4 py-8">
-        <div class="max-w-3xl mx-auto">
+        <div class="max-w-7xl mx-auto">
             <section class="mb-12">
                 <h2 class="text-2xl font-bold mb-6">Schedule</h2>
                 <div class="overflow-x-auto rounded-lg shadow border border-gray-200">
@@ -129,13 +129,13 @@ const items = [
                             <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">Time</th>
                             <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">Type</th>
                             <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">Title</th>
-                            <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">Speakers</th>
+                            <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">Speaker(s)</th>
                         </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-100">
                         {items.map(item => {
                             const rowClass = {
-                                keynote: 'bg-blue-50',
+                                keynote: 'bg-red-50',
                                 panel: 'bg-yellow-50',
                                 break: 'bg-gray-50 italic text-gray-600',
                                 regular: 'bg-white'
