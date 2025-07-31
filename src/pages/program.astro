@@ -1,5 +1,114 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+
+// program items
+const items = [
+    {
+        start: '9:00',
+        end: '9:15',
+        type: 'regular',
+        title: 'Intro',
+        speakers: ''
+    },
+    {
+        start: '9:15',
+        end: '10:00',
+        type: 'keynote',
+        title: 'TBD',
+        speakers: 'Friederike Eyssel'
+    },
+    {
+        start: '10:00',
+        end: '10:15',
+        type: 'regular',
+        title: 'Towards Affect-Adaptive Human-Robot Interaction: A Protocol for Multimodal Dataset Collection on Social Anxiety',
+        speakers: 'Vasna Poprcova'
+    },
+    {
+        start: '10:15',
+        end: '10:30',
+        type: 'regular',
+        title: 'A Multimodal Large Language Model Framework for Gesture Generation in Social Robotics',
+        speakers: 'Doanh Le Thien'
+    },
+    {
+        start: '10:30',
+        end: '10:45',
+        type: 'regular',
+        title: 'Ethical implications in the personalization of "social" robots: a critical analysis',
+        speakers: 'Lavezzo'
+    },
+    {
+        start: '10:45',
+        end: '11:00',
+        type: 'break',
+        title: 'Coffee Break',
+        speakers: ''
+    },
+    {
+        start: '11:00',
+        end: '12:00',
+        type: 'panel',
+        title: 'Panel: "A personalized robot today is a surveillance system tomorrow"',
+        speakers: 'Micol Spitale (FOR - in person), Shruti Chandra (FOR  - online), Maha Elgarf (AGAINST - online)'
+    },
+    {
+        start: '12:00',
+        end: '12:45',
+        type: 'keynote',
+        title: 'Beyond One-Size-Fits-All: Designing, Ethical, Adaptive Social Robots for Inclusive Assistive Care',
+        speakers: 'Hanan Salam'
+    },
+    {
+        start: '12:45',
+        end: '14:00',
+        type: 'break',
+        title: 'Lunch Break',
+        speakers: ''
+    },
+    {
+        start: '14:00',
+        end: '14:15',
+        type: 'regular',
+        title: 'Towards Safer Homes: Behavior-Adaptive Risk Assessment for Service Robots Using Semantic Context',
+        speakers: 'Sena Ishii'
+    },
+    {
+        start: '14:15',
+        end: '14:30',
+        type: 'regular',
+        title: 'Humanoids Robot in Pediatric Care Facilities: from Pain Management System to Cognitive Rehabilitation Support',
+        speakers: 'Laura Fiorini'
+    },
+    {
+        start: '14:30',
+        end: '15:15',
+        type: 'keynote',
+        title: 'Paging All Socially Assistive Robots: Persuasive And Intelligent Social Robots for Healthcare And Everyday Assistance',
+        speakers: 'Goldie Nejat'
+    },
+    {
+        start: '15:15',
+        end: '15:30',
+        type: 'break',
+        title: 'Coffee Break',
+        speakers: ''
+    },
+    {
+        start: '15:30',
+        end: '16:30',
+        type: 'panel',
+        title: 'Panel: "The more robot adapts to us, the less we adapt to others"',
+        speakers: 'Tariq Iqbal (FOR - online), Daniel Tozadore (FOR - in person), Maartje de Graaf (AGAINST - online), Kim Baraka (AGAINST - in person)'
+    },
+    {
+        start: '16:30',
+        end: '16:45',
+        type: 'regular',
+        title: 'Closing remarks',
+        speakers: ''
+    }
+]
 ---
 
 <MainLayout title="Workshop Program">
@@ -13,15 +122,37 @@ import MainLayout from '../layouts/MainLayout.astro';
         <div class="max-w-3xl mx-auto">
             <section class="mb-12">
                 <h2 class="text-2xl font-bold mb-6">Schedule</h2>
-                <div class="prose prose-lg">
-
-                    <!-- Placeholder for the program schedule -->
-                    <div class="bg-white rounded-lg shadow-md p-6 mt-8">
-                        <p class="text-gray-600 text-center">
-                            Program details will be available closer to the event date.
-                        </p>
-                    </div>
-
+                <div class="overflow-x-auto rounded-lg shadow border border-gray-200">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-100">
+                        <tr>
+                            <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">Time</th>
+                            <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">Type</th>
+                            <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">Title</th>
+                            <th class="px-4 py-3 text-left text-sm font-semibold text-gray-700">Speakers</th>
+                        </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                        {items.map(item => {
+                            const rowClass = {
+                                keynote: 'bg-blue-50',
+                                panel: 'bg-yellow-50',
+                                break: 'bg-gray-50 italic text-gray-600',
+                                regular: 'bg-white'
+                            }[item.type] || 'bg-white';
+                            return (
+                                    <tr class={rowClass}>
+                                        <td class="px-4 py-3 whitespace-nowrap text-sm text-gray-900">
+                                            {item.start} – {item.end}
+                                        </td>
+                                        <td class="px-4 py-3 whitespace-nowrap text-sm capitalize text-gray-700">{item.type}</td>
+                                        <td class="px-4 py-3 text-sm text-gray-900">{item.title}</td>
+                                        <td class="px-4 py-3 text-sm text-gray-700">{item.speakers || '—'}</td>
+                                    </tr>
+                            );
+                        })}
+                        </tbody>
+                    </table>
                 </div>
             </section>
 
