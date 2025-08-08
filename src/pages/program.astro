@@ -6,107 +6,107 @@ const items = [
     {
         start: '9:00',
         end: '9:15',
-        type: 'regular',
-        title: 'Intro',
-        speakers: ''
+        type: 'Opening',
+        title: 'Welcome and Introduction',
+        speakers: 'Workshop Chairs'
     },
     {
         start: '9:15',
         end: '10:00',
-        type: 'keynote',
+        type: 'Keynote',
         title: 'TBD',
         speakers: 'Friederike Eyssel'
     },
     {
         start: '10:00',
         end: '10:15',
-        type: 'regular',
+        type: 'Paper',
         title: 'Towards Affect-Adaptive Human-Robot Interaction: A Protocol for Multimodal Dataset Collection on Social Anxiety',
         speakers: 'Vasna Poprcova'
     },
     {
         start: '10:15',
         end: '10:30',
-        type: 'regular',
+        type: 'Paper',
         title: 'A Multimodal Large Language Model Framework for Gesture Generation in Social Robotics',
         speakers: 'Nguyen Tan Viet Tuyen'
     },
     {
         start: '10:30',
         end: '10:45',
-        type: 'regular',
+        type: 'Paper',
         title: 'Ethical implications in the personalization of "social" robots: a critical analysis',
         speakers: 'Lavezzo'
     },
     {
         start: '10:45',
         end: '11:00',
-        type: 'break',
+        type: 'Break',
         title: 'Coffee Break',
         speakers: ''
     },
     {
         start: '11:00',
         end: '12:00',
-        type: 'panel',
-        title: 'Panel: "A personalized robot today is a surveillance system tomorrow"',
-        speakers: 'Micol Spitale (FOR - in person), Shruti Chandra (FOR  - online), Maha Elgarf (AGAINST - online)'
+        type: 'Debate',
+        title: '"A personalized robot today is a surveillance system tomorrow"',
+        speakers: 'Micol Spitale (FOR - in person), Shruti Chandra (FOR  - online), Maha Elgarf (AGAINST - online), Mike Lightart (AGAINST - in person)'
     },
     {
         start: '12:00',
         end: '12:45',
-        type: 'keynote',
+        type: 'Keynote',
         title: 'Beyond One-Size-Fits-All: Designing, Ethical, Adaptive Social Robots for Inclusive Assistive Care',
         speakers: 'Hanan Salam'
     },
     {
         start: '12:45',
         end: '14:00',
-        type: 'break',
+        type: 'Break',
         title: 'Lunch Break',
         speakers: ''
     },
     {
         start: '14:00',
         end: '14:15',
-        type: 'regular',
+        type: 'Paper',
         title: 'Towards Safer Homes: Behavior-Adaptive Risk Assessment for Service Robots Using Semantic Context',
         speakers: 'Sena Ishii'
     },
     {
         start: '14:15',
         end: '14:30',
-        type: 'regular',
+        type: 'Paper',
         title: 'Humanoids Robot in Pediatric Care Facilities: from Pain Management System to Cognitive Rehabilitation Support',
         speakers: 'Laura Fiorini'
     },
     {
         start: '14:30',
         end: '15:15',
-        type: 'keynote',
+        type: 'Keynote',
         title: 'Paging All Socially Assistive Robots: Persuasive And Intelligent Social Robots for Healthcare And Everyday Assistance',
         speakers: 'Goldie Nejat'
     },
     {
         start: '15:15',
         end: '15:30',
-        type: 'break',
+        type: 'Break',
         title: 'Coffee Break',
         speakers: ''
     },
     {
         start: '15:30',
         end: '16:30',
-        type: 'panel',
-        title: 'Panel: "The more robot adapts to us, the less we adapt to others"',
+        type: 'Debate',
+        title: '"The more robot adapts to us, the less we adapt to others"',
         speakers: 'Tariq Iqbal (FOR - online), Daniel Tozadore (FOR - in person), Maartje de Graaf (AGAINST - online), Kim Baraka (AGAINST - in person)'
     },
     {
         start: '16:30',
         end: '16:45',
-        type: 'regular',
-        title: 'Closing remarks',
-        speakers: ''
+        type: 'Conclusions',
+        title: 'Closing Remarks',
+        speakers: 'Workshop Chairs'
     }
 ]
 
@@ -164,10 +164,12 @@ const keynots = [
                         <tbody class="divide-y divide-gray-100">
                         {items.map(item => {
                             const rowClass = {
-                                keynote: 'bg-red-50',
-                                panel: 'bg-yellow-50',
-                                break: 'bg-gray-50 italic text-gray-600',
-                                regular: 'bg-white'
+                                Keynote: 'bg-red-50',
+                                Panel: 'bg-yellow-50',
+                                Paper: 'bg-green-50',
+                                Break: 'bg-gray-50 italic text-gray-600',
+                                Opening: 'bg-white',
+                                Conclusions: 'bg-white',
                             }[item.type] || 'bg-white';
                             return (
                                     <tr class={rowClass}>
