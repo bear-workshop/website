@@ -214,8 +214,6 @@ const keynots = [
             </section>
         </div>
 
-
-
         <div class="max-w-7xl mx-auto">
             <section class="mb-12">
                 <h2 class="text-2xl font-bold mb-6">Keynotes</h2>
@@ -223,14 +221,19 @@ const keynots = [
                     {keynots.map(talk => (
                             <div id={talk.id} class="bg-white rounded-lg shadow-md p-6">
 
-                                <h3 class="font-bold text-lg mb-1">{talk.name}</h3>
-                                <p class="text-blue-600 font-medium mb-2 text-sm">{talk.affiliation}</p>
+                                <div>
+                                    <h3 class="font-bold text-lg mb-1">{talk.name}</h3>
+                                    <p class="text-blue-600 font-medium mb-2 text-xs">{talk.affiliation}</p>
+                                </div>
+                                <div>
+                                    <h3 class="font-bold text-base mb-1">Abstract</h3>
+                                    <p class="text-gray-600 font-medium text-base">{talk.abstract}</p>
+                                </div>
 
-                                <h3 class="font-bold text-base mb-1">Abstract</h3>
-                                <p class="text-gray-600 font-medium text-sm">{talk.abstract}</p>
-
-                                <h3 class="font-bold text-sm mb-1">Short Bio</h3>
-                                <p class="text-gray-600 text-sm">{talk.bio}</p>
+                                <div>
+                                    <h3 class="font-bold text-sm mb-1">Short Bio</h3>
+                                    <p class="text-gray-600 text-sm">{talk.bio}</p>
+                                </div>
                             </div>
                     ))}
                 </div>
