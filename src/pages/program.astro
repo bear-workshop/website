@@ -7,6 +7,7 @@ const items = [
         start: '9:00',
         end: '9:15',
         type: 'Opening',
+        talkId: 'none',
         title: 'Welcome and Introduction',
         speakers: 'Workshop Chairs'
     },
@@ -14,6 +15,7 @@ const items = [
         start: '9:15',
         end: '10:00',
         type: 'Keynote',
+        talkId: 'talk1',
         title: 'Why we should care about accessibility in HRI',
         speakers: 'Friederike Eyssel'
     },
@@ -21,6 +23,7 @@ const items = [
         start: '10:00',
         end: '10:15',
         type: 'Paper',
+        talkId: 'none',
         title: 'Towards Affect-Adaptive Human-Robot Interaction: A Protocol for Multimodal Dataset Collection on Social Anxiety',
         speakers: 'Vasna Poprcova'
     },
@@ -28,6 +31,7 @@ const items = [
         start: '10:15',
         end: '10:30',
         type: 'Paper',
+        talkId: 'none',
         title: 'A Multimodal Large Language Model Framework for Gesture Generation in Social Robotics',
         speakers: 'Nguyen Tan Viet Tuyen'
     },
@@ -35,6 +39,7 @@ const items = [
         start: '10:30',
         end: '10:45',
         type: 'Paper',
+        talkId: 'none',
         title: 'Ethical implications in the personalization of "social" robots: a critical analysis',
         speakers: 'Lavezzo'
     },
@@ -42,6 +47,7 @@ const items = [
         start: '10:45',
         end: '11:00',
         type: 'Break',
+        talkId: 'none',
         title: 'Coffee Break',
         speakers: ''
     },
@@ -49,6 +55,7 @@ const items = [
         start: '11:00',
         end: '12:00',
         type: 'Debate',
+        talkId: 'none',
         title: '"A personalized robot today is a surveillance system tomorrow"',
         speakers: 'Micol Spitale (FOR - in person), Shruti Chandra (FOR  - online), Maha Elgarf (AGAINST - online), Mike Lightart (AGAINST - in person)'
     },
@@ -56,6 +63,7 @@ const items = [
         start: '12:00',
         end: '12:45',
         type: 'Keynote',
+        talkId: 'talk2',
         title: 'Beyond One-Size-Fits-All: Designing, Ethical, Adaptive Social Robots for Inclusive Assistive Care',
         speakers: 'Hanan Salam'
     },
@@ -63,6 +71,7 @@ const items = [
         start: '12:45',
         end: '14:00',
         type: 'Break',
+        talkId: 'none',
         title: 'Lunch Break',
         speakers: ''
     },
@@ -70,6 +79,7 @@ const items = [
         start: '14:00',
         end: '14:15',
         type: 'Paper',
+        talkId: 'none',
         title: 'Towards Safer Homes: Behavior-Adaptive Risk Assessment for Service Robots Using Semantic Context',
         speakers: 'Sena Ishii'
     },
@@ -77,12 +87,14 @@ const items = [
         start: '14:15',
         end: '14:30',
         type: 'Paper',
+        talkId: 'none',
         title: 'Humanoids Robot in Pediatric Care Facilities: from Pain Management System to Cognitive Rehabilitation Support',
         speakers: 'Laura Fiorini'
     },
     {
         start: '14:30',
         end: '15:15',
+        talkId: 'talk3',
         type: 'Keynote',
         title: 'Paging All Socially Assistive Robots: Persuasive And Intelligent Social Robots for Healthcare And Everyday Assistance',
         speakers: 'Goldie Nejat'
@@ -91,6 +103,7 @@ const items = [
         start: '15:15',
         end: '15:30',
         type: 'Break',
+        talkId: 'none',
         title: 'Coffee Break',
         speakers: ''
     },
@@ -98,6 +111,7 @@ const items = [
         start: '15:30',
         end: '16:30',
         type: 'Debate',
+        talkId: 'none',
         title: '"The more robot adapts to us, the less we adapt to others"',
         speakers: 'Tariq Iqbal (FOR - online), Daniel Tozadore (FOR - in person), Maartje de Graaf (AGAINST - online), Kim Baraka (AGAINST - in person)'
     },
@@ -113,6 +127,7 @@ const items = [
 
 const keynots = [
     {
+        id: 'talk3',
         name: 'Goldie Nejat',
         title: 'Paging all Socially Assistive Robots: Persuasive and Intelligent Social Robots for Healthcare and Everyday Assistance',
         affiliation: 'Canada Research Chair in Intelligent Assistive and Collaborative Robots Professor and Director of the Autonomous Systems and Biomechatronics Laboratory (ASBLab), Department of Mechanical and Industrial Engineering, University of Toronto, Toronto, Canada',
@@ -121,6 +136,7 @@ const keynots = [
         bio: 'The world is experiencing a silver tsunami: rapid population aging. As the world’s older population significantly increases, dementia is becoming one of the fastest growing diseases, with no cure in sight. Socially assistive robots are a unique disruptive innovation that are becoming a crucial part of everyday society, especially in a post-pandemic world, aiding people in everyday life to meet urgent and immediate assistive needs. This talk will present some of my group’s recent research efforts (asblab.mie.utoronto.ca) in developing intelligent and persuasive socially assistive robots to improve quality of life and promote independence (aging-in-place) of older adults, including those living with dementia and their care providers. In particular, I will discuss some of my team’s many robots including Brian, Casper, Tangy, Blueberry, Salt, Pepper, Chili, Hans Solo, and Luke and Leia that have been deployed in human-centred environments from long-term care homes and hospitals to grocery stores to autonomously provide cognitive and social interventions, help with activities of daily living, and lead individual-based and group-based recreational activities, games and therapies. Our novel multimodal interactive robots are serving as assistants to individuals as well as groups of users, while learning to personalize these interactions to the needs and wants of these users by using perceptual, behavioural and persuasive intelligence. Numerous user studies conducted in care settings will also be discussed to highlight how these socially assistive robots can effectively be integrated into people’s everyday lives to support person-centred care and overall wellbeing.'
     },
     {
+        id: 'talk1',
         name: 'Friedrike Eyssel',
         title: 'Why we should care about accessibility in HRI',
         affiliation: 'Bielefed University',
@@ -129,6 +145,7 @@ const keynots = [
         bio: 'Friederike Eyssel is Professor of Psychology and head of the research group “Applied Social Psychology and Gender Research” at the Center for Cognitive Interaction Technology (CITEC), Bielefeld University, Germany. She has held visiting professorships in social psychology at the University of Münster, the Technical University of Dortmund, the University of Cologne, and the New York University Abu Dhabi. Friederike is passionate about basic and applied social psychological research and she is interested in various research topics ranging from social robotics, trust, and acceptance of novel techlologies to attitudes and attitude change. She is co-author of various textbooks on social robots, among them “HRI: An introduction (2020, 2024 Cambridge University Press, Hanser, 2020, 2022), “Robots in Education” (2021, Routledge), and “Theory and practice of sociosensitive and socioactive systems” (2022, Springer). Friederike Eyssel has received the Bielefeld University Award for sustainable engagement for Gender Equality in 2021. Furthermore, she received the Bielefeld University Karl-Peter Grotemeyer Prize for Excellence in Teaching in 2021 and the IEEE-RAS Cognitive Robotics Distinguished Lecturer Award, 2022-2024 and 2025-2027. She has been an active part of the social robotics community, for instance, as   Associate Editor for ACM “Transactions in Human-Robot Interaction” and Section Editor for “Robotics”. Friederike is Chairwoman of Bielefeld University\'s Ethics Review Board and will share expertise from this context in her talk.'
     },
     {
+        id: 'talk2',
         name: 'Hanan Salam',
         title: 'Beyond One-Size-Fits-All: Designing Ethical, Adaptive Social Robots for Inclusive Assistive Care',
         affiliation: '',
@@ -177,8 +194,17 @@ const keynots = [
                                             {item.start} – {item.end}
                                         </td>
                                         <td class="px-4 py-3 whitespace-nowrap text-sm capitalize text-gray-700">{item.type}</td>
-                                        <td class="px-4 py-3 text-sm text-gray-900">{item.title}</td>
-                                        <td class="px-4 py-3 text-sm text-gray-700">{item.speakers || '—'}</td>
+                                        {item.type == 'Keynote' ? (
+                                            <td class="px-4 py-3 text-sm text-gray-900"><a href={`#${item.talkId}`}>{item.title}</a></td>
+                                        ) : (
+                                            <td class="px-4 py-3 text-sm text-gray-900">{item.title}</td>
+                                        )}
+
+                                        {item.type == 'Keynote' ? (
+                                            <td class="px-4 py-3 text-sm text-gray-700"><a href={`#${item.talkId}`}>{item.speakers}</a></td>
+                                        ) : (
+                                            <td class="px-4 py-3 text-sm text-gray-700">{item.speakers || '—'}</td>
+                                        )}
                                     </tr>
                             );
                         })}
@@ -192,18 +218,19 @@ const keynots = [
 
         <div class="max-w-7xl mx-auto">
             <section class="mb-12">
-                <h2 class="text-2xl font-bold mb-6">Organizing Committee</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <h2 class="text-2xl font-bold mb-6">Keynotes</h2>
+                <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
                     {keynots.map(talk => (
-                            <div class="bg-white rounded-lg shadow-md p-6">
-                                <h3 class="font-bold text-lg mb-1">{talk.name}</h3>
-                                <p class="text-blue-600 font-medium mb-2">{talk.affiliation}</p>
-                                <p class="text-gray-600">{talk.bio}</p>
-                            </div>
+                            <div id={talk.id} class="bg-white rounded-lg shadow-md p-6">
 
-                            <div class="bg-white rounded-lg shadow-md p-6">
-                                <h3 class="font-bold text-lg mb-1">{talk.title}</h3>
-                                <p class="text-gray-600 font-small">{talk.abstract}</p>
+                                <h3 class="font-bold text-lg mb-1">{talk.name}</h3>
+                                <p class="text-blue-600 font-medium mb-2 text-sm">{talk.affiliation}</p>
+
+                                <h3 class="font-bold text-base mb-1">Abstract</h3>
+                                <p class="text-gray-600 font-medium text-sm">{talk.abstract}</p>
+
+                                <h3 class="font-bold text-sm mb-1">Short Bio</h3>
+                                <p class="text-gray-600 text-sm">{talk.bio}</p>
                             </div>
                     ))}
                 </div>
